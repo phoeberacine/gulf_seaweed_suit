@@ -21,14 +21,26 @@ SST & Salinity, HYCOM: https://www.hycom.org/data/gomu0pt04/expt-50pt1
 *Human Activities ("Exclusion Areas")*
 
 EEZ, NOAA: https://inport.nmfs.noaa.gov/inport/item/54383
+
 EEZ, Marine Regios: http://www.marineregions.org/downloads.php
+
 Gulf of Mexico Area, Marine Regios: http://www.marineregions.org/gazetteer.php?p=details&id=4288
+
 Artifical reefs, NOAA: https://coast.noaa.gov/digitalcoast/data/artificialreefs.html
+
 Marine Protected Area, NOAA: https://marineprotectedareas.noaa.gov/media/data/MPAI2017.zip
+
 Shipping Fairways, NOAA: https://inport.nmfs.noaa.gov/inport/item/39986
+
 Oil and Gas Platforms, NOAA/BOEM: https://inport.nmfs.noaa.gov/inport/item/54390
+
 Oil and Gas Wells, NOAA/BOEM: https://inport.nmfs.noaa.gov/inport/item/54392
+
 Submarine Cables, NOAA: https://inport.nmfs.noaa.gov/inport/item/57238
+
 Cable areas, NOAA: https://inport.nmfs.noaa.gov/inport/item/54402
+
 Pipeline areas, NOAA: https://inport.nmfs.noaa.gov/inport/item/54395
+
 Danger and Restricted Zones, NOAA: https://inport.nmfs.noaa.gov/inport/item/48876
+
