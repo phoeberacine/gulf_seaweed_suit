@@ -10,7 +10,7 @@ Seaweed suitability map of the Gulf of Mexico.
 
 <code>Suitability_hycom.Rmd</code> SST and salinity data from HYCOM and all other rasters resampled to be same resolution. Reclassifies oceanographic rasters to be binary depending on specific seaweed thresholds set at the top of the Rmd. Creates suitability, human acitvies areas "exclusion areas", and both suitability and exclusion maps.
 
-#### Note about Data
+#### Data
 
 All data is from publically available sources.
 
@@ -43,4 +43,21 @@ Cable areas, NOAA: https://inport.nmfs.noaa.gov/inport/item/54402
 Pipeline areas, NOAA: https://inport.nmfs.noaa.gov/inport/item/54395
 
 Danger and Restricted Zones, NOAA: https://inport.nmfs.noaa.gov/inport/item/48876
+
+### Packages
+library(tidyverse) #version 1.3.0
+
+library(raster) #Version 3.3-13
+
+library(sdmpredictors) #Version 0.2.8
+
+library(sf) #version 0.9-4
+
+library(maps) #Version 3.3.0
+
+library(rnaturalearth) #Version 0.1.0
+
+library(rnaturalearthdata) #Version 0.1.0
+
+library(rgdal) #Version 1.5-16
 
