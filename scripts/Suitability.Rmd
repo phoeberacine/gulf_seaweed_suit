@@ -256,7 +256,7 @@ oil_gas_platforms <- raster(paste0(path,"/og_binary.tif"))
 
 ```
 
-# Eclusion Map
+# Exclusion Map
 
 ```{r}
 exclusion <- overlay( mpa,
