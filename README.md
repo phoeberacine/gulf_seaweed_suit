@@ -14,11 +14,11 @@ Seaweed suitability map of the Gulf of Mexico.
 
 All data is from publically available sources.
 
-*Oceanographic*
+##### Oceanographic
 
 SST & Salinity, HYCOM: https://www.hycom.org/data/gomu0pt04/expt-50pt1
 
-*Human Activities ("Exclusion Areas")*
+##### Human Activities ("Exclusion Areas")
 
 EEZ, NOAA: https://inport.nmfs.noaa.gov/inport/item/54383
 
