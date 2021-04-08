@@ -45,19 +45,19 @@ Pipeline areas, NOAA: https://inport.nmfs.noaa.gov/inport/item/54395
 Danger and Restricted Zones, NOAA: https://inport.nmfs.noaa.gov/inport/item/48876
 
 ### Packages
-library(tidyverse) #version 1.3.0
+tidyverse: Version 1.3.0
 
-library(raster) #Version 3.3-13
+raster: Version 3.3-13
 
-library(sdmpredictors) #Version 0.2.8
+sdmpredictors: Version 0.2.8
 
-library(sf) #version 0.9-4
+sf: Version 0.9-4
 
-library(maps) #Version 3.3.0
+maps: Version 3.3.0
 
-library(rnaturalearth) #Version 0.1.0
+rnaturalearth: Version 0.1.0
 
-library(rnaturalearthdata) #Version 0.1.0
+rnaturalearthdata: Version 0.1.0
 
-library(rgdal) #Version 1.5-16
+rgdal: Version 1.5-16
 
