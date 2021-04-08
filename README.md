@@ -16,7 +16,8 @@ All data is from publically available sources.
 
 ##### Oceanographic
 
-SST & Salinity, HYCOM: https://www.hycom.org/data/gomu0pt04/expt-50pt1
+SST, Salinity, N:P, Current Velocity: HYCOM: https://www.hycom.org/data/gomu0pt04/expt-50pt1
+Depth, GEBCO:
 
 ##### Human Activities ("Exclusion Areas")
 
