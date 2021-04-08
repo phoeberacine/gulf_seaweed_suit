@@ -11,9 +11,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 
-library(httr)
-library(raster)
-library(lubridate)
+library(httr) #Version 1.4.1
+library(raster) #Version 3.3.13
+library(lubridate) #Version 1.7.9
 
 ```
 
