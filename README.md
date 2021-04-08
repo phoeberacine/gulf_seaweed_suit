@@ -44,20 +44,4 @@ Pipeline areas, NOAA: https://inport.nmfs.noaa.gov/inport/item/54395
 
 Danger and Restricted Zones, NOAA: https://inport.nmfs.noaa.gov/inport/item/48876
 
-### Packages
-tidyverse: Version 1.3.0
-
-raster: Version 3.3-13
-
-sdmpredictors: Version 0.2.8
-
-sf: Version 0.9-4
-
-maps: Version 3.3.0
-
-rnaturalearth: Version 0.1.0
-
-rnaturalearthdata: Version 0.1.0
-
-rgdal: Version 1.5-16
 
