@@ -90,168 +90,6 @@ write_sf(eez_gulf, paste0(path, "eez_gulf.shp"))
 
 # Suitability Layers
 
-### BIO-ORACLE layers http://www.bio-oracle.org/code.php
-*if from bio oracle don't need to resample rasters all have same resolution of 5 arcmin*
-
-```{r}
-# Explore datasets in the 'sdmpredictors' package 
-# list_datasets() 
-
-# Explore layers in a dataset 
-list <- list_layers() %>% 
-  filter(dataset_code == "Bio-ORACLE") %>% 
-  filter(layer_code == "BO2_phosphatemean_ss")
-
-list_layers(datasets)
-
-# Description of additional functions in the 'sdmpredictors' package: https://onlinelibrary.wiley.com/doi/pdf/10.1111/geb.12693
-```
-
-```{r}
-#### Function to process BIO-ORACLE data ####
-
-#' process_bo_data
-#'
-#' @param BO_layer layer loaded from bio oracle
-#' @param proj projection to reproject raster layer in
-#' @param area aoi
-#' @param mask polygon to mask the raster file to
-#'
-#' @return mask of raster layer -- preset to be mask of gulf eez
-#'
-#' @examples
-
-process_bo_data = function(BO_layer, project = proj, area = aoi, mask = eez_gulf) {
-  
-  #reproject
-  layer_proj <- projectRaster(BO_layer, crs = project)
-
-  # crop to aoi
-  layer_crop <- crop(layer_proj, area)
-  
-  # mask
-  layer_mask <- mask(layer_crop, mask)
-  
-  return(layer_mask)
-}
-
-```
-
-SST
-```{r}
-
-# download max & min SST from BIO-ORACLE
-max_sst <- load_layers("BO_sstmax") 
-min_sst <- load_layers("BO_sstmin") 
-
-# reproject, crop, mask function
-max_sst_mask <- process_bo_data(max_sst)
-min_sst_mask <- process_bo_data(min_sst)
-
-# plot
-plot(max_sst_mask)
-plot(min_sst_mask)
-
-# Write rasters for Suitability Analysis
-writeRaster(max_sst_mask, paste0(path, "max_sst_mask.tif"), overwrite = T)
-writeRaster(min_sst_mask, paste0(path, "min_sst_mask.tif"), overwrite = T)
-```
-
-
-Average Nitrates (mol.m-3)
-```{r}
-# load layer
-mean_nitrate_ss <- load_layers("BO2_nitratemean_ss")
-
-# reproject, crop, mask function
-mean_nitrate_mask <- process_bo_data(mean_nitrate_ss)
-
-# plot
-plot(mean_nitrate_mask)
-
-# write to file
-writeRaster(mean_nitrate_mask, paste0(path, "mean_nitrate_mask.tif"), overwrite = T)
-```
-
-Phosphates (mean_nitrate_mask)
-```{r}
-# load layer
-mean_phosphate_ss <- load_layers("BO2_phosphatemean_ss")
-
-# reproject, crop, mask function
-mean_phosphate_mask <- process_bo_data(mean_phosphate_ss)
-
-# plot
-plot(mean_phosphate_mask)
-
-# write to file
-writeRaster(mean_phosphate_mask, paste0(path, "mean_phosphate_mask.tif"), overwrite = T)
-```
-
-
-N:P ratio
-
-```{r}
-# calculate N:P ratio and scale down by 1000
-n_p_ratio <- (mean_nitrate_mask/mean_phosphate_mask)/1000
-plot(n_p_ratio)
-
-# write to file
-writeRaster(n_p_ratio, paste0(path, "n_p_ratio.tif"), overwrite = T)
-```
-
-Salinity (PSS)
-
-```{r}
-# max and min salinity at sea surface
-salinity_min <- load_layers("BO2_salinitymin_ss")
-salinity_max <- load_layers("BO2_salinitymax_ss")
-
-# reproject, crop, mas
-sal_min_mask <- process_bo_data(salinity_min)
-sal_max_mask <- process_bo_data(salinity_max)
-
-# plot
-plot(sal_min_mask)
-plot(sal_max_mask)
-
-# write to file
-writeRaster(sal_min_mask, paste0(path, "sal_min_mask.tif"), overwrite = T)
-writeRaster(sal_max_mask, paste0(path, "sal_max_mask.tif"), overwrite = T)
-```
-
-Sea surface Current Velocity 
-
-```{r}
-# get min current velocity data
-curvel_min_ss <- load_layers("BO2_curvelmin_ss")
-
-# reproject, crop, mask function
-curvel_min_mask <- process_bo_data(curvel_min_ss)
-
-# plot
-plot(curvel_min_mask)
-
-# write to file
-writeRaster(curvel_min_mask, paste0(path, "curvel_min_mask.tif"), overwrite = T)
-```
-
-```{r}
-# get max current velocity data
-curvel_max_ss <- load_layers("BO2_curvelmax_ss")
-
-# reproject, crop, mask function
-curvel_max_mask <- process_bo_data(curvel_max_ss)
-
-# plot
-plot(curvel_max_mask)
-
-# write to file
-writeRaster(curvel_max_mask, paste0(path, "curvel_max_mask.tif"), overwrite = T)
-
-
-```
-
 ### HYCOM data
 
 #### Sea surface temperature
@@ -394,7 +232,7 @@ depth_crop <- crop(depth, aoi)
 Resample
 
 ```{r}
-# Resample to Bio-Oracle Cell Size (ATM Bio-Oracle Cell Size is the Standard)
+# Resample to Bio-Oracle Cell Size (ATM Bio-Oracle Cell Size is the Standard) #Ask AC??
   # make resample crop
   max_sst_crop <- crop(projectRaster(max_sst, crs = proj), aoi)
   
@@ -620,7 +458,7 @@ plot(suitable)
 map('world',fill=T,add=T,col='gray')
 ```
 
-## Need to figure out buffering
+## Need to figure out buffering -- ASK AC??
 
 Submarine cables
 
