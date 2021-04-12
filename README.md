@@ -25,6 +25,8 @@ EEZ, NOAA: https://inport.nmfs.noaa.gov/inport/item/54383
 
 EEZ, Marine Regios: http://www.marineregions.org/downloads.php
 
+Bathymetry, GEBCO: https://www.gebco.net/
+
 Gulf of Mexico Area, Marine Regios: http://www.marineregions.org/gazetteer.php?p=details&id=4288
 
 Artifical reefs, NOAA: https://coast.noaa.gov/digitalcoast/data/artificialreefs.html
