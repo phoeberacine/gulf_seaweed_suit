@@ -30,15 +30,13 @@ Green is sargassum purple is gracillaria
 - Sea surface temperature range: 0-35°C
 - Current velocity: 0.1-1 m/s
 
+### NEED TO EDIT THESE & ADD IN REFS
+
 *Sargassum* specific:
 - Optimal sea surface temp: 18-30°C
 - Optimal salinity: 24-42 psu
 
-*Euchema* (old) specific:
-- Optimal sea surface temp: 25-30°C
-- Optimal salinity: 28-34 psu
-
-*Euchema* (Phoebe) specific:
+*Euchema* specific:
 - Optimal sea surface temp: 18-30°C
 - Optimal salinity: 30-40 psu
 
@@ -71,6 +69,8 @@ max_sst_value <- 30
 min_sal_value <- 30
 max_sal_value <- 40
 
+
+## IS CURRENT VELOCITY STILL A PART OF THINGS? IT DOESN"T LOOK LIKE IT?
 # current velocity
 # min_curvel_value <- 0.1
 # max_curvel_value <- 1
