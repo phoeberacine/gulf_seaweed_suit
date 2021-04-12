@@ -8,6 +8,11 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+### NOTES FOR CLEAN UP
+- added versions of packages used
+- need bufering info
+- where's N:P? where's N:P from?
+- GEBCO had never been cited in SI
 
 ```{r, message = FALSE}
 # load packages
