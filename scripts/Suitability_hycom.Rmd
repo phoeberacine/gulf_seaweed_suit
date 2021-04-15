@@ -19,7 +19,7 @@ library(sf)  #Version 0.9.4
 library(maps) #Version 3.3.0
 
 ```
-Green is sargassum purple is gracillaria
+Green is sargassum purple is gracillaria -- AC PLS CHECK
 
 # Suitability 
 
@@ -30,24 +30,31 @@ Green is sargassum purple is gracillaria
 - Sea surface temperature range: 0-35°C
 - Current velocity: 0.1-1 m/s
 
-### NEED TO EDIT THESE & ADD IN REFS
-
-*Sargassum* specific:
-- Optimal sea surface temp: 18-30°C
-- Optimal salinity: 24-42 psu
-
-*Euchema* specific:
+*Eucheuma* specific [1-3]:
 - Optimal sea surface temp: 18-30°C
 - Optimal salinity: 30-40 psu
 
-*Gracilaria* specific:
-- Optimal sea surface temp: 15-30°C
-- Optimal salinity: 15-25 psu
+*Gracilaria* specific [4,5]:
+- Optimal sea surface temp: 15-34°C
+- Optimal salinity: 8-60 psu
+- 
+*Sargassum* specific [6]:
+- Optimal sea surface temp: 18-30°C
+- Optimal salinity: 24-42 psu
 
-*Gracilaria spp* from Lisa specific:
-- Optimal sea surface temp: 20-30°C
-- Optimal salinity: 25-40 psu
-- Current velocity: 0.05-0.5 m/s
+
+**References**
+1. Dawes, C. J. (1989). Temperature acclimation in cultured Eucheuma isiforme from Florida and E. alvarezii from the Philippines. Journal of Applied Phycology, 1(1), 59.
+
+2. Tiensongrusmee, B. Site Selection for Eucheuma. Food and Agriculture Organization. http://www.fao.org/3/AB738E/AB738E04.htm
+
+3. Dawes, C. J., Mathieson, A. C., & Cheney, D. P. (1974). Ecological studies of Floridian Eucheuma (Rhodophyta, Gigartinales). I. Seasonal growth and reproduction. Bulletin of Marine Science, 24(2), 235-273.
+
+4. Bird, N. L., Chen, L. M., & McLachlan, J. (1979). Effects of temperature, light and salinity on growth in culture of Chondrus crispus. Furcellaria lumbricalis, Gracilaria tikvahiae (Gigartinales, Rhodophyta), and Fucus serratus (Fucales, Phaeophyta). Botanica Marina, 22(8), 521-528.
+
+5. Gorman, L., Kraemer, G. P., Yarish, C., Boo, S. M., & Kim, J. K. (2017). The effects of temperature on the growth rate and nitrogen content of invasive Gracilaria vermiculophylla and native Gracilaria tikvahiae from Long Island Sound, USA. Algae, 32(1), 57-66.
+
+6. Rocha, C. M., Sousa, A. M., Kim, J. K., Magalhães, J. M., Yarish, C., & do Pilar Gonçalves, M. (2019). Characterization of agar from Gracilaria tikvahiae cultivated for nutrient bioextraction in open water farms. Food Hydrocolloids, 89, 260-271.
 
 
 
@@ -247,12 +254,12 @@ map('state',fill=F,add=T)
 #save_map(png_name = "seaweed_gen_suitable.png", title = "General Seaweed Suitability", 
 #         color = "light blue")
 
-# sargassum
+# Eucheuma
+#save_map(png_name = "eucheuma_suitable.png", title = "Eucheuma Suitability", 
+#         color = "green")
+# Sargassum
 #save_map(png_name = "sargassum_suitable_v6.png", title = "Sargassum Suitability", 
  #        color = "dark green")
-# Euchema
-#save_map(png_name = "euchema_suitable.png", title = "Euchema Suitability", 
-#         color = "green")
 # Gracilaria
 #save_map(png_name = "gracilaria_suitable_v2.png", title = "Gracilaria Suitability", 
  #        color = "purple")
