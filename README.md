@@ -16,7 +16,7 @@ All data is from publically available sources.
 
 ##### Oceanographic
 
-- SST & Salinity: HYCOM: https://www.hycom.org/data/gomu0pt04/expt-50pt1
+- SST & Salinity, HYCOM: https://www.hycom.org/data/gomu0pt04/expt-50pt1
 - N:P, BioOracle: https://www.bio-oracle.org/downloads-to-email.php
 - Depth, GEBCO: https://www.gebco.net/
 
