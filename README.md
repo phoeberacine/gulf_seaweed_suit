@@ -4,6 +4,9 @@ Seaweed suitability map of the Gulf of Mexico.
 
 ### Usage
 
+**Paper & Supplementary Materials** https://www.sciencedirect.com/science/article/pii/S0308597X21001172#bib27
+
+##### Repo Usage
 <code>data_processing.Rmd</code> Takes in raw polygon and raster files and reprojects, crops, and masks them to the Gulf of Mexico EEZ. Polygons are rasterized to binary rasters where 1 is where the polygon was and 0 is empty cells.
 
 <code>scraping.Rmd</code> Sea Surface Temperature (SST) and salinity data is from [HYCOM](https://www.hycom.org/data/gomu0pt04/expt-50pt1). 
