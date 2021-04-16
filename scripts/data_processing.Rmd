@@ -1,6 +1,7 @@
 ---
 title: "Data processing"
 author: "AnnaClaire Marley"
+editor: "Phoebe Racine"
 date: "4/16/2020"
 output: html_document
 ---
