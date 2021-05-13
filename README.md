@@ -12,6 +12,9 @@ Paper & Supplementary Materials https://www.sciencedirect.com/science/article/pi
 
 <code>Suitability_hycom.Rmd</code> SST and salinity data from HYCOM and all other rasters resampled to be same resolution. Reclassifies oceanographic rasters to be binary depending on specific seaweed thresholds set at the top of the Rmd. Creates suitability, human acitvies areas "exclusion areas", and both suitability and exclusion maps.
 
+## To Explore
+Shiny app developed by Syndey Rilum, Jaleise Hall, and Lauren Abowd: https://sydneyrilum.shinyapps.io/seaweed_shiny_app/
+
 ### Data
 
 All data is from publically available sources.
